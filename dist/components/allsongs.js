@@ -1,9 +1,10 @@
 function mySongs (pos) {
+
 	var songA, songB, songC, songD, songE, songF, songG, songH, songI, songJ, songK, songL, songM, 
-		songN, songO, songP, songQ, songR, songS/*, songT, songU, songV, songW, songX, songY, songZ*/;
+		songN, songO, songP, songQ, songR, songS, songT, songU, songV, songW, songX, songY;
 
 	songA = {
-		titles: ["Adong Evà", "Ai Cho","Anh Em","Anh Em Ta Về","Ánh Sao Rơi","Ấu Nhi","Ấu Nhi Ca","Ấu Nhi Ca 2","Ấu Nhi Ngoan",
+		titles: ['Adong Evà', "Ai Cho","Anh Em","Anh Em Ta Về","Ánh Sao Rơi","Ấu Nhi","Ấu Nhi Ca","Ấu Nhi Ca 2","Ấu Nhi Ngoan",
 				"Ai Sinh Ai Nuôi","Amazing Grace (Hồng Ân Thiên Chúa)","Awesome God"],
 
 		lyrics: ["Ngày xưa Adong Evà, Thiên Chúa cho làm mẹ cha.<br>Đặt tên muôn loài muôn thú, con này là con gì?",
@@ -628,12 +629,17 @@ function mySongs (pos) {
 	var page = "";
 
 	if(pos != 25){
-		for(var i = 0; i < song[pos].titles.length; i++){
-	    	page += "<h3 style='margin:0em;'>" + song[pos].titles[i] + "</h3>" + song[pos].lyrics[i] + "<br><br>";
-    	}
+		if(song[pos].titles != ''){
+			for(var i = 0; i < song[pos].titles.length; i++){
+		    	page += "<h3 style='margin:0em;'>" + song[pos].titles[i] + "</h3>" + song[pos].lyrics[i] + "<br><br>";
+	    	}
 
-    	document.getElementById("letter").innerHTML = letter[pos];
-    	document.getElementById("allSongs").innerHTML = page;
+	    	document.getElementById("letter").innerHTML = letter[pos];
+	    	document.getElementById("allSongs").innerHTML = page;
+		}else{
+	    	document.getElementById("letter").innerHTML = "There are no songs that start with letter " + letter[pos] + ".";
+	    	document.getElementById("allSongs").innerHTML = "";
+		}
 	}else{
 		for(var i = 0; i < song.length; i++){
 			for(var u = 0; u < song[i].titles.length; u++){
