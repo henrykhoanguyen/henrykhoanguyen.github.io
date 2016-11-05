@@ -156,9 +156,30 @@
   margin-bottom: 1em;
 }
 
+#mainlink:hover, #followlink:hover{
+  opacity: .5;
+}
+
 #followlink{
   margin-left: 1em;
   margin-bottom: 1em;
+}
+
+#nganhAu{
+  margin-bottom: 1em;
+  width: 20%;
+  height: 10%
+}
+
+#nganhAu:hover, #nganh:hover{
+  opacity: .5;
+}
+
+#nganh{
+  margin-left: 1em;
+  margin-bottom: 1em;
+  width: 20%;
+  height: 10%
 }
 
 button.accordion {
