@@ -21,7 +21,7 @@ var thieuInfo = {
 };
 
 var nghiaInfo = {
-	title: ["Đại Hội Nghĩa Hiệp",
+	title: ["Đại Hội Nghĩa Hiệp - IMPORTANT",
 			"Đoàn VSL Pinic"
 			],
 
