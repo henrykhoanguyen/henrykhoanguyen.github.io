@@ -59,7 +59,7 @@
   display: none;
 }
 
-@media (min-width: 800px) {
+@media only screen and (max-width: 800px) {
   .ui.fixed.menu {
     display: none !important;
   }
@@ -80,34 +80,6 @@
   .masthead h2 {
     margin-top: 0.5em;
     font-size: 1.5em;
-  }
-
-  .alert{
-  text-align: center;
-  font-size:5em; 
-  color:red;
-  padding-top:1em;
-  padding-bottom:0.5em;
-  }
-}
-
-@media(max-width: 800px){
-  .alert{
-  text-align: center;
-  font-size:3.5em; 
-  color:red;
-  padding-top:1em;
-  padding-bottom:0.5em;
-  }
-}
-
-@media(max-width: 500px){
-  .alert{
-  text-align: center;
-  font-size: 2em; 
-  color:red;
-  padding-top:1em;
-  padding-bottom:0.5em;
   }
 }
 
